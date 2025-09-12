@@ -15,34 +15,35 @@
         <nav>
             <a href="#" class="logo">DataAnalyst</a>
             <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills & Tools</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-lang="nav-about">About Me</a></li>
+                <li><a href="#skills" data-lang="nav-skills">Skills & Tools</a></li>
+                <li><a href="#projects" data-lang="nav-projects">Projects</a></li>
+                <li><a href="#contact" data-lang="nav-contact">Contact</a></li>
             </ul>
+            <!-- Boton de cambiar idioma -->
+            <button class="language-toggle" aria-label="Cambiar idioma">
+                <span class="lang-text">EN</span>
+            </button>
         </nav>
     </header>
-
-    <!-- Botón móvil (opcional) -->
-    <button class="mobile-menu-button">Menu</button>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Allan Orellana</h1>
-            <p class="subtitle">Data Analyst & Business Intelligence Specialist</p>
-            <p class="hero-description">
+            <h1 data-lang="hero-title" data-typewriter="Allan Orellana"></h1>
+            <p class="subtitle" data-lang="hero-subtitle">Data Analyst & Business Intelligence Specialist</p>
+            <p class="hero-description" data-lang="hero-description">
                 Transformo datos complejos en insights accionables que impulsan el crecimiento empresarial. 
                 Especializado en análisis de datos, dashboards interactivos, automatizaciones y una combinación 
                 de herramientas low-code para crear soluciones y optimizar procesos.
             </p>
-            <a href="#about" class="cta-button">Conoce mi trabajo</a>
+            <a href="#about" class="cta-button" data-lang="cta-button">Conoce mi trabajo</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title" data-lang="about-title">About Me</h2>
         <div class="about-content">
             <div class="about-image">
                 <div class="profile-image">
@@ -76,7 +77,7 @@
 
     <!-- skills & tools Section -->
     <section id="skills">
-        <h2 class="section-title">Skills & Tools</h2>
+        <h2 class="section-title" data-lang="skills-title">Skills & Tools</h2>
         <div class="skills-container">
 
             <!-- Power BI -->
@@ -317,7 +318,7 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title" data-lang="projects-title">Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-image">
@@ -331,6 +332,7 @@
                     <div class="project-tech">
                         <span class="tech-tag">Excel</span>
                         <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Python</span>
                     </div>
                     <div class="project-links">
                         <a href="https://app.powerbi.com/view?r=eyJrIjoiNzUzYTU4N2QtNzYxNi00ODRlLWIwNTEtNjdhOGFiODFlNzFmIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9" class="FashionStore link">
@@ -342,7 +344,7 @@
 
             <div class="project-card">
                 <div class="project-image">
-                    <i class="fas fa-heartbeat"></i>
+                    <img src="assets/FleetRequests2.jpg" alt="Captura de proyecto power BI" height=205>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Fleet department requests</h3>
@@ -353,7 +355,7 @@
                         <span class="tech-tag">Power BI</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://app.powerbi.com/view?r=eyJrIjoiY2M3NGVhODItYWNkNC00YTMyLTlmZmQtNjUwZTYyZGIzMGE0IiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=d36d6047e02b70cc2cae"" class="project-link">
+                        <a href="https://app.powerbi.com/view?r=eyJrIjoiY2M3NGVhODItYWNkNC00YTMyLTlmZmQtNjUwZTYyZGIzMGE0IiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=d36d6047e02b70cc2cae" class="project-link">
                             <i class="fas fa-external-link-alt"></i> View
                         </a>
                     </div>
@@ -362,25 +364,23 @@
 
             <div class="project-card">
                 <div class="project-image">
-                    <i class="fas fa-coins"></i>
+                    <img src="assets/RetailAnalytics.jpg" alt="Captura de proyecto power BI" height=200>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Nombre del proyecto</h3>
+                    <h3 class="project-title">Retail Analytics</h3>
                     <p class="project-description">
                         Descripción del proyecto.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">XGBoost</span>
-                        <span class="tech-tag">Plotly</span>
+                        <span class="tech-tag">Power BI</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">
                             <i class="fab fa-github"></i> Code
                         </a>
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Demo
+                        <a href="https://app.powerbi.com/view?r=eyJrIjoiNDVkMjMzODMtODlmOC00YzY2LTgyZTktMWJjMTdhZmEwMzllIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=409938f12b04936c2adb" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> View
                         </a>
                     </div>
                 </div>
@@ -390,10 +390,11 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title" data-lang="contact-title">Contact</h2>
         <div class="contact-content">
             <p class="contact-description">
                 ¿Cómo puedo ayudarte? 
+            </p>
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
@@ -414,9 +415,6 @@
                 </a>
                 <a href="#" class="social-link">
                     <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-twitter"></i>
                 </a>
                 <a href="#" class="social-link">
                     <i class="fab fa-kaggle"></i>

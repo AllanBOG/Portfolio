@@ -1,21 +1,3 @@
-// Función para actualizar el header según el tema
-function updateHeaderTheme() {
-    const header = document.querySelector('header');
-    const isDarkMode = document.body.classList.contains('dark-theme');
-    
-    if (!header) return;
-    
-    if (isDarkMode) {
-        header.style.background = window.pageYOffset > 100 
-            ? 'rgba(15, 23, 42, 0.98)'
-            : 'rgba(15, 23, 42, 0.95)';
-    } else {
-        header.style.background = window.pageYOffset > 100 
-            ? 'rgba(255, 255, 255, 0.98)'
-            : 'rgba(255, 255, 255, 0.95)';
-    }
-}
-
 // =================================
 // NAVEGACIÓN SUAVE
 // =================================
@@ -60,9 +42,6 @@ const unifiedScrollHandler = throttle(() => {
     const progressBar = document.querySelector('.scroll-progress');
     const header = document.querySelector('header');
     const hero = document.querySelector('.hero');
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const isDarkMode = document.body.classList.contains('dark-theme');
 
     if (progressBar) {
         const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -73,19 +52,10 @@ const unifiedScrollHandler = throttle(() => {
     // Efectos del header - RESPETA EL TEMA OSCURO
     if (header) {
         if (scrollY > 100) {
-            if (isDarkMode) {
-                header.style.background = 'rgba(15, 23, 42, 0.98)';
-                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-            }
+            header.style.background = 'rgba(255, 255, 255, 0.98)';
+            header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
         } else {
-            if (isDarkMode) {
-                header.style.background = 'rgba(15, 23, 42, 0.95)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
+            header.style.background = 'rgba(255, 255, 255, 0.95)';
             header.style.boxShadow = 'none';
         }
     }
@@ -98,6 +68,8 @@ const unifiedScrollHandler = throttle(() => {
 
     // Destacar enlace de navegación activo
     let current = '';
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -152,34 +124,462 @@ function initializeAnimations() {
 }
 
 // =================================
+// TRADUCCIONES
+// =================================
+
+const translations = {
+    es: {
+        'nav-about': 'Acerca de mí',
+        'nav-skills': 'Herramientas y habilidades',
+        'nav-projects': 'Proyectos',
+        'nav-contact': 'Contacto',
+        'hero-title': 'Allan Orellana',
+        'hero-subtitle': 'Analista de Datos y Especialista en Business Intelligence',
+        'hero-description': 'Transformo datos complejos en insights accionables que impulsan el crecimiento empresarial. Especializado en análisis de datos, dashboards interactivos, automatizaciones y una combinación de herramientas low-code para crear soluciones y optimizar procesos.',
+        'cta-button': 'Conoce mi trabajo',
+        'about-title': 'Acerca de mí',
+        'skills-title': 'Herramientas y habilidades',
+        'skills': [
+            {
+                name: 'Power BI',
+                img: 'assets/Power BI logo.png',
+                alt: 'Power BI logo',
+                front: [],
+                back: [
+                    'Dashboards, informes y herramientas interactivas',
+                    'PowerQuery y DAX',
+                    'Modelos semánticos con actualización automática (Gateway)'
+                ]
+            },
+            {
+                name: 'Tableau',
+                img: 'assets/Tableau logo.png',
+                alt: 'Tableau logo',
+                front: [],
+                back: [
+                    'Dashboards interactivos y visualizaciones avanzadas',
+                    'Conexión a múltiples fuentes de datos',
+                    'Storytelling con datos y animaciones'
+                ]
+            },
+            {
+                name: 'Excel',
+                img: 'assets/Excel logo.png',
+                alt: 'Excel logo',
+                front: [],
+                back: [
+                    'Tablas dinámicas',
+                    'PowerQuery y Power Pivot',
+                    'Informes y dashboards',
+                    'Tablas con fórmulas complejas'
+                ]
+            },
+            {
+                name: 'SQL',
+                img: 'assets/SQL logo.png',
+                alt: 'SQL logo',
+                front: [],
+                back: [
+                    'Creación de consultas simples o combinadas',
+                    'Filtrar y ordenar resultados',
+                    'Integración con Power BI'
+                ]
+            },
+            {
+                name: 'Power Automate',
+                img: 'assets/Power Automate logo.png',
+                alt: 'Power Automate logo',
+                front: [],
+                back: [
+                    'Notificaciones automáticas',
+                    'Automatizaciones con servicios de Microsoft o terceros',
+                    'Recolección y sincronización de datos',
+                    'Optimización de procesos de negocios'
+                ]
+            },
+            {
+                name: 'Power Apps',
+                img: 'assets/Power Apps logo.png',
+                alt: 'Power Apps logo',
+                front: [],
+                back: [
+                    'Aplicaciones personalizadas low-code',
+                    'Integración con servicios de Microsoft',
+                    'Gestión de datos y optimización de procesos'
+                ]
+            },
+            {
+                name: 'Python',
+                img: 'assets/Python logo.png',
+                alt: 'Python logo',
+                front: [],
+                back: [
+                    'Análisis Exploratorio de Datos (EDA)',
+                    'Automatización',
+                    'Aprendiendo análisis de datos (Pandas y NumPy)'
+                ]
+            },
+            {
+                name: 'JavaScript',
+                img: 'assets/JavaScript logo.png',
+                alt: 'JavaScript logo',
+                front: [],
+                back: [
+                    'Manipulación de DOM',
+                    'Integración con HTML',
+                    'En aprendizaje activo dentro del programa ONE de Oracle'
+                ]
+            },
+            {
+                name: 'HTML',
+                img: 'assets/HTML logo.png',
+                alt: 'HTML 5 logo',
+                front: [],
+                back: [
+                    'Diseño de plantillas personalizadas para emails o notificaciones',
+                    'En aprendizaje activo dentro del programa ONE de Oracle'
+                ]
+            },
+            {
+                name: 'SharePoint',
+                img: 'assets/SharePoint logo.png',
+                alt: 'SharePoint logo',
+                front: [],
+                back: [
+                    'Creación de sitios colaborativos',
+                    'Integración con Power Automate, Power Apps',
+                    'Sitios para publicación de dashboards'
+                ]
+            },
+            {
+                name: 'OneDrive',
+                img: 'assets/OneDrive logo.png',
+                alt: 'OneDrive logo',
+                front: [],
+                back: [
+                    'Almacenamiento y sincronización segura de datasets',
+                    'Compartición controlada de archivos e informes',
+                    'Integración con herramientas de Microsoft: Power BI, Power Apps, Power Automate, SharePoint'
+                ]
+            },
+            {
+                name: 'Photoshop',
+                img: 'assets/PhotoShop logo.png',
+                alt: 'Photoshop logo',
+                front: [],
+                back: [
+                    'Edición y composición de imágenes',
+                    'Diseño de elementos visuales personalizados',
+                    'Branding corporativo y UI/UX de dashboards'
+                ]
+            }
+        ],
+        'projects-title': 'Proyectos',
+        'projects': [
+            {
+                title: 'Fashion Store',
+                desc: 'Ver las tendencias principales con la información de ventas y nivel de satisfacción de clientes.',
+                tech: ['Excel', 'Power BI'],
+                img: 'assets/FashionStores.jpg',
+                alt: 'Captura de proyecto power BI',
+                links: [
+                    { url: 'https://app.powerbi.com/view?r=eyJrIjoiNzUzYTU4N2QtNzYxNi00ODRlLWIwNTEtNjdhOGFiODFlNzFmIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9', icon: 'fas fa-external-link-alt', text: 'Ver' }
+                ]
+            },
+            {
+                title: 'Solicitudes departamento de flota',
+                desc: 'Pensado para el seguimiento de solicitudes del departamento de flota y principales tendencias de solicitudes.',
+                tech: ['Power BI'],
+                img: 'assets/fleetRequests2.jpg', 
+                icon: 'fas fa-heartbeat',
+                links: [
+                    { url: 'https://app.powerbi.com/view?r=eyJrIjoiY2M3NGVhODItYWNkNC00YTMyLTlmZmQtNjUwZTYyZGIzMGE0IiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=d36d6047e02b70cc2cae', icon: 'fas fa-external-link-alt', text: 'Ver' }
+                ]
+            },
+            {
+                title: 'Analítica Retail',
+                desc: 'Dashboard interactivo de análisis de ventas minoristas con segmentación RFM de clientes. Procesamiento ETL con Python y visualización en Power BI.',
+                tech: ['Python', 'Power BI'],
+                img: 'assets/RetailAnalytics.jpg',
+                icon: 'fas fa-coins',
+                links: [
+                    { url: '#', icon: 'fab fa-github', text: 'Código' },
+                    { url: 'https://app.powerbi.com/view?r=eyJrIjoiNDVkMjMzODMtODlmOC00YzY2LTgyZTktMWJjMTdhZmEwMzllIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=409938f12b04936c2adb', icon: 'fas fa-external-link-alt', text: 'Ver' }
+                ]
+            }
+        ],
+        'contact-title': 'Contacto',
+        'about-text': [
+            'Soy un analista de datos apasionado con más de 3 años de experiencia ayudando a tomar decisiones informadas basadas en datos. Mi enfoque se centra en convertir números y datos complejos en narrativas claras y accionables.',
+            '<strong>◎ Análisis & Visualización:</strong> Diseño de dashboards interactivos en Power BI y Excel (Power Query, DAX) para monitoreo KPI y tendencias. Desarrollo de informes automatizados que ahorran tiempo y reducen errores manuales.',
+            '<strong>◎ Automatización & Desarrollo:</strong> Creación de flujos de trabajo con Power Automate y aplicaciones low-code en Power Apps. Soluciones personalizadas con Python (Pandas, NumPy) para análisis avanzados o integración de sistemas.',
+            '<strong>◎ Diseño & UX/UI:</strong> Combino diferentes herramientas como PhotoShop o Ilustrator para mejorar las visualizaciones y materiales gráficos, asegurando claridad e impacto.'
+        ]
+    },
+    en: {
+        'nav-about': 'About Me',
+        'nav-skills': 'Skills & Tools',
+        'nav-projects': 'Projects',
+        'nav-contact': 'Contact',
+        'hero-title': 'Allan Orellana',
+        'hero-subtitle': 'Data Analyst & Business Intelligence Specialist',
+        'hero-description': 'I transform complex data into actionable insights that drive business growth. Specialized in data analysis, interactive dashboards, automation, and a combination of low-code tools to create solutions and optimize processes.',
+        'cta-button': 'View my work',
+        'about-title': 'About Me',
+        'skills-title': 'Skills & Tools',
+        'skills': [
+            {
+                name: 'Power BI',
+                img: 'assets/Power BI logo.png',
+                alt: 'Power BI logo',
+                front: [],
+                back: [
+                    'Dashboards, reports and interactive tools',
+                    'PowerQuery and DAX',
+                    'Semantic models with automatic refresh (Gateway)'
+                ]
+            },
+            {
+                name: 'Tableau',
+                img: 'assets/Tableau logo.png',
+                alt: 'Tableau logo',
+                front: [],
+                back: [
+                    'Interactive dashboards and advanced visualizations',
+                    'Connection to multiple data sources',
+                    'Data storytelling and animations'
+                ]
+            },
+            {
+                name: 'Excel',
+                img: 'assets/Excel logo.png',
+                alt: 'Excel logo',
+                front: [],
+                back: [
+                    'Pivot tables',
+                    'PowerQuery and Power Pivot',
+                    'Reports and dashboards',
+                    'Tables with complex formulas'
+                ]
+            },
+            {
+                name: 'SQL',
+                img: 'assets/SQL logo.png',
+                alt: 'SQL logo',
+                front: [],
+                back: [
+                    'Creation of simple or combined queries',
+                    'Filtering and sorting results',
+                    'Integration with Power BI'
+                ]
+            },
+            {
+                name: 'Power Automate',
+                img: 'assets/Power Automate logo.png',
+                alt: 'Power Automate logo',
+                front: [],
+                back: [
+                    'Automatic notifications',
+                    'Automations with Microsoft or third-party services',
+                    'Data collection and synchronization',
+                    'Business process optimization'
+                ]
+            },
+            {
+                name: 'Power Apps',
+                img: 'assets/Power Apps logo.png',
+                alt: 'Power Apps logo',
+                front: [],
+                back: [
+                    'Custom low-code applications',
+                    'Integration with Microsoft services',
+                    'Data management and process optimization'
+                ]
+            },
+            {
+                name: 'Python',
+                img: 'assets/Python logo.png',
+                alt: 'Python logo',
+                front: [],
+                back: [
+                    'Exploratory Data Analysis (EDA)',
+                    'Automation',
+                    'Learning data analysis (Pandas and NumPy)'
+                ]
+            },
+            {
+                name: 'JavaScript',
+                img: 'assets/JavaScript logo.png',
+                alt: 'JavaScript logo',
+                front: [],
+                back: [
+                    'DOM manipulation',
+                    'Integration with HTML',
+                    'Active learning in Oracle ONE program'
+                ]
+            },
+            {
+                name: 'HTML',
+                img: 'assets/HTML logo.png',
+                alt: 'HTML 5 logo',
+                front: [],
+                back: [
+                    'Design of custom templates for emails or notifications',
+                    'Active learning in Oracle ONE program'
+                ]
+            },
+            {
+                name: 'SharePoint',
+                img: 'assets/SharePoint logo.png',
+                alt: 'SharePoint logo',
+                front: [],
+                back: [
+                    'Creation of collaborative sites',
+                    'Integration with Power Automate, Power Apps',
+                    'Sites for dashboard publishing'
+                ]
+            },
+            {
+                name: 'OneDrive',
+                img: 'assets/OneDrive logo.png',
+                alt: 'OneDrive logo',
+                front: [],
+                back: [
+                    'Secure storage and synchronization of datasets',
+                    'Controlled sharing of files and reports',
+                    'Integration with Microsoft tools: Power BI, Power Apps, Power Automate, SharePoint'
+                ]
+            },
+            {
+                name: 'Photoshop',
+                img: 'assets/PhotoShop logo.png',
+                alt: 'Photoshop logo',
+                front: [],
+                back: [
+                    'Image editing and composition',
+                    'Design of custom visual elements',
+                    'Corporate branding and dashboard UI/UX'
+                ]
+            }
+        ],
+        'projects-title': 'Projects',
+        'projects': [
+            {
+                title: 'Fashion Store',
+                desc: 'See the main trends with sales information and customer satisfaction levels.',
+                tech: ['Excel', 'Power BI', 'Python'],
+                img: 'assets/FashionStores.jpg',
+                alt: 'Power BI project screenshot',
+                links: [
+                    { url: 'https://app.powerbi.com/view?r=eyJrIjoiNzUzYTU4N2QtNzYxNi00ODRlLWIwNTEtNjdhOGFiODFlNzFmIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9', icon: 'fas fa-external-link-alt', text: 'View' }
+                ]
+            },
+            {
+                title: 'Fleet department requests',
+                desc: 'Designed for tracking fleet department requests and main request trends.',
+                tech: ['Power BI'],
+                img: 'assets/FleetRequests2.jpg',
+                icon: 'fas fa-heartbeat',
+                links: [
+                    { url: 'https://app.powerbi.com/view?r=eyJrIjoiY2M3NGVhODItYWNkNC00YTMyLTlmZmQtNjUwZTYyZGIzMGE0IiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=d36d6047e02b70cc2cae', icon: 'fas fa-external-link-alt', text: 'View' }
+                ]
+            },
+            {
+                title: 'Retail Analytics',
+                desc: 'Interactive retail sales analytics dashboard with RFM customer segmentation. ETL processing with Python and Power BI visualization.',
+                tech: ['Python', 'Power BI'],
+                img: 'assets/RetailAnalytics.jpg',
+                icon: 'fas fa-coins',
+                links: [
+                    { url: '#', icon: 'fab fa-github', text: 'Code' },
+                    { url: 'https://app.powerbi.com/view?r=eyJrIjoiNDVkMjMzODMtODlmOC00YzY2LTgyZTktMWJjMTdhZmEwMzllIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=409938f12b04936c2adb', icon: 'fas fa-external-link-alt', text: 'View' }
+                ]
+            }
+        ],
+        'contact-title': 'Contact',
+        'about-text': [
+            'I am a passionate data analyst with over 3 years of experience helping organizations make data-driven decisions. My focus is on turning numbers and complex data into clear, actionable narratives.',
+            '<strong>◎ Analysis & Visualization:</strong> Design of interactive dashboards in Power BI and Excel (Power Query, DAX) for KPI monitoring and trends. Development of automated reports that save time and reduce manual errors.',
+            '<strong>◎ Automation & Development:</strong> Creation of workflows with Power Automate and low-code apps in Power Apps. Custom solutions with Python (Pandas, NumPy) for advanced analysis or system integration.',
+            '<strong>◎ Design & UX/UI:</strong> I combine tools like PhotoShop or Illustrator to enhance visualizations and graphic materials, ensuring clarity and impact.'
+        ]
+    }
+};
+
+// =================================
 // EFECTO DE ESCRITURA PARA EL TÍTULO HERO
 // =================================
 
-function initTypeWriterEffect() {
+function runTypeWriterEffect() {
     const heroTitle = document.querySelector('.hero h1');
     if (!heroTitle) return;
 
-    const text = heroTitle.textContent;
+    const text = heroTitle.getAttribute('data-typewriter') || '';
     heroTitle.textContent = '';
-    heroTitle.style.borderRight = '2px solid #333'; // Cursor parpadeante
-    
+    heroTitle.style.borderRight = '2px solid #333';
+
     let i = 0;
-    const typeWriter = () => {
+    function typeWriter() {
         if (i < text.length) {
             heroTitle.textContent += text.charAt(i);
             i++;
             setTimeout(typeWriter, 100);
         } else {
-            // Remover cursor al finalizar
             setTimeout(() => {
                 heroTitle.style.borderRight = 'none';
             }, 1000);
         }
-    };
-    
-    // Iniciar el efecto de escritura después de 1 segundo
-    setTimeout(typeWriter, 1000);
+    }
+    setTimeout(typeWriter, 500);
 }
+
+// =================================
+// GESTIÓN DE IDIOMA (SOLO UNA VEZ)
+// =================================
+
+function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    const langButton = document.querySelector('.lang-text');
+    if (langButton) {
+        langButton.textContent = lang === 'es' ? 'EN' : 'ES';
+    }
+    const elementsToTranslate = document.querySelectorAll('[data-lang]');
+    elementsToTranslate.forEach(element => {
+        const key = element.getAttribute('data-lang');
+        if (translations[lang] && translations[lang][key]) {
+            // Si es el h1, solo actualiza el atributo data-typewriter, NO el textContent
+            if (element.matches('.hero h1')) {
+                element.setAttribute('data-typewriter', translations[lang][key]);
+                element.textContent = ''; // Vacía el h1 para que el efecto escriba desde cero
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+    renderAbout(lang); // Actualiza el contenido del About
+    renderSkills(lang); // Actualiza las skills
+    renderProjects(lang); // Actualiza los proyectos
+    localStorage.setItem('language', lang);
+
+    // Ejecuta el efecto de escritura solo después de actualizar el atributo
+    runTypeWriterEffect();
+}
+
+function initLanguageToggle() {
+    let languageToggle = document.querySelector('.language-toggle');
+    if (languageToggle) {
+        languageToggle.addEventListener('click', toggleLanguage);
+    }
+    const savedLang = localStorage.getItem('language') || 'es';
+    setLanguage(savedLang);
+}
+
+function toggleLanguage() {
+    const currentLang = document.documentElement.lang || 'es';
+    const newLang = currentLang === 'es' ? 'en' : 'es';
+    setLanguage(newLang);
+}
+
 
 // =================================
 // ANIMACIÓN MEJORADA PARA SKILLS
@@ -264,59 +664,12 @@ function validateForm(formElement) {
 }
 
 // =================================
-// GESTIÓN DE TEMA OSCURO MEJORADA
-// =================================
-
-function initThemeToggle() {
-    // Crear botón de toggle si no existe
-    let themeToggle = document.querySelector('.theme-toggle');
-    
-    if (!themeToggle) {
-        themeToggle = document.createElement('button');
-        themeToggle.className = 'theme-toggle';
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        themeToggle.setAttribute('aria-label', 'Cambiar tema');
-        
-        // Agregar al header
-        const header = document.querySelector('header nav');
-        if (header) {
-            header.appendChild(themeToggle);
-        }
-    }
-    
-    themeToggle.addEventListener('click', toggleTheme);
-}
-
-function toggleTheme() {
-    const body = document.body;
-    const isDark = body.classList.toggle('dark-theme');
-    
-    // Actualizar icono
-    const themeToggle = document.querySelector('.theme-toggle i');
-    if (themeToggle) {
-        themeToggle.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-    }
-    
-    // Actualizar header
-    updateHeaderTheme();
-    
-    // Guardar preferencia
-    localStorage.setItem('darkTheme', isDark);
-    
-    // Transición suave
-    body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-}
-
-// =================================
 // INICIALIZACIÓN PRINCIPAL
 // =================================
 
 document.addEventListener('DOMContentLoaded', () => {
     // Remover clase de loading
     document.body.classList.remove('loading');
-    
-    // Inicializar tema del header
-    updateHeaderTheme();
 
     // Cargar tema guardado
     const savedTheme = localStorage.getItem('darkTheme');
@@ -328,9 +681,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.body.classList.add('loaded');
         initializeAnimations();
-        initTypeWriterEffect();
+        //runTypeWriterEffect();
         initSkillsAnimations();
-        initThemeToggle();
+        initLanguageToggle();
     }, 100);
 });
 
@@ -386,6 +739,81 @@ function logPerformance() {
         const loadTime = timing.loadEventEnd - timing.navigationStart;
         console.log(`Página cargada en: ${loadTime}ms`);
     }
+}
+
+function renderAbout(lang) {
+    const aboutTextArr = translations[lang]['about-text'];
+    const aboutTextDiv = document.querySelector('.about-text');
+    if (aboutTextDiv && Array.isArray(aboutTextArr)) {
+        aboutTextDiv.innerHTML = aboutTextArr.map(p => `<p>${p}</p>`).join('');
+    }
+}
+// =================================
+// RENDERIZADO DINÁMICO DE SKILLS
+// =================================
+function renderSkills(lang) {
+    const skills = translations[lang]['skills'];
+    const container = document.querySelector('.skills-container');
+    if (!container) return;
+    container.innerHTML = '';
+    skills.forEach(skill => {
+        const div = document.createElement('div');
+        div.className = `skill-item skill-${skill.name.toLowerCase().replace(/\s/g, '')}`;
+        div.innerHTML = `
+            <div class="skill-content">
+                <div class="skill-front">
+                    <div class="skill-logo">
+                        <img src="${skill.img}" alt="${skill.alt}" loading="lazy">
+                    </div>
+                    <div class="skill-name">${skill.name}</div>
+                </div>
+                <div class="skill-back">
+                    ${skill.back.map(level => `<div class="skill-level">${level}</div>`).join('')}
+                </div>
+            </div>
+        `;
+        container.appendChild(div);
+    });
+    initSkillsAnimations();
+}
+
+
+// =================================
+// RENDERIZADO DINÁMICO DE PROYECTOS
+// =================================
+function renderProjects(lang) {
+    const projects = translations[lang]['projects'];
+    const grid = document.querySelector('.projects-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    projects.forEach(project => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.innerHTML = `
+            <div class="project-image">
+                ${
+                    project.img
+                        ? `<img src="${project.img}" alt="${project.alt || ''}" height="205">`
+                        : `<i class="${project.icon || ''}"></i>`
+                }
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">${project.title}</h3>
+                <p class="project-description">${project.desc}</p>
+                <div class="project-tech">
+                    ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                </div>
+                <div class="project-links">
+                    ${project.links.map(link =>
+                        `<a href="${link.url}" class="project-link" target="_blank">
+                            <i class="${link.icon}"></i> ${link.text}
+                        </a>`
+                    ).join('')}
+                </div>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
 }
 
 // Inicializar debugging en desarrollo

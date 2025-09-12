@@ -1,23 +1,4 @@
 /* =================================
-   BARRA DE PROGRESO
-   ================================= */
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    width: 0%;
-    z-index: 9999;
-    transition: width 0.1s ease;
-}
-
-/* Ajuste para tema oscuro */
-.dark-theme .scroll-progress {
-    background: linear-gradient(90deg, var(--accent-color), #7dd3fc);
-}
-
-/* =================================
    VARIABLES Y RESETEO
    ================================= */
 
@@ -39,28 +20,6 @@
     --bg-card: #ffffff;
     --shadow: 0 10px 25px rgba(0,0,0,0.1);
     --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.dark-theme {
-    --text-dark: #f1f5f9;
-    --text-light: #94a3b8;
-    --bg-light: #0f172a;
-    --bg-dark: #020617;
-    --bg-card: #1e293b;
-    --shadow: 0 10px 25px rgba(0,0,0,0.3);
-    --shadow-hover: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-/* Asegurar contraste en tarjetas */
-.dark-theme .skill-item,
-.dark-theme .project-card {
-    background: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dark-theme header {
-    background: rgba(17, 24, 39, 0.95);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 html {
@@ -172,38 +131,29 @@ nav {
 }
 
 /* =================================
-   ESTILOS PARA TEMA OSCURO - NAVEGACIÓN
+   CAMBIAR IDIOMA - NAVEGACIÓN
    ================================= */
 
-.dark-theme header {
-    background: rgba(15, 23, 42, 0.98);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dark-theme .logo {
-    color: var(--accent-color);
-}
-
-.dark-theme .nav-links a {
-    color: var(--text-white);
-}
-
-.dark-theme .nav-links a:hover {
-    color: var(--accent-color);
-}
-
-.dark-theme .nav-links a::after {
-    background-color: var(--accent-color);
-}
-
-/* Menú móvil */
-.mobile-menu-button {
-    display: none;
-    background: transparent;
+.language-toggle {
+    background: var(--accent-color);
+    color: white;
     border: none;
-    color: var(--primary-color);
-    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
     cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.language-toggle:hover {
+    background: var(--secondary-color);
+    transform: translateY(-1px);
+}
+
+.language-toggle:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 @media (max-width: 768px) {
@@ -880,22 +830,6 @@ button:focus,
 /* =================================
    VERIFICACIÓN DE CONTRASTE
    ================================= */
-
-@media (max-width: 768px) {
-    /* Estilos para menú móvil en tema oscuro */
-    .dark-theme .nav-links {
-        background: var(--bg-dark);
-    }
-    
-    .dark-theme .nav-links a {
-        color: var(--text-white) !important;
-    }
-    
-    /* Asegurar legibilidad en todos los dispositivos */
-    .nav-links a {
-        padding: 0.5rem 0;
-    }
-}
 
 @media (max-width: 768px) {
     .scroll-progress {
