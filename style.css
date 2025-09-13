@@ -308,6 +308,16 @@ section {
     margin: 0 auto;
 }
 
+.about-photo {
+display: block;
+width: 100%;
+max-width: 300px;
+height: auto;
+border-radius: 20px;
+object-fit: cover;
+box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
 .profile-image:hover {
     transform: scale(1.05);
 }
@@ -746,6 +756,7 @@ footer {
         width: 250px;
         height: 250px;
         font-size: 3rem;
+        border-radius: 20px;
     }
 
     .skills-container {

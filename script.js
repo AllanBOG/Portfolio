@@ -303,7 +303,7 @@ const translations = {
                 img: 'assets/RetailAnalytics.jpg',
                 icon: 'fas fa-coins',
                 links: [
-                    { url: '#', icon: 'fab fa-github', text: 'Código' },
+                    { url: 'https://github.com/AllanBOG/Portfolio/blob/main/data_processing.py', icon: 'fab fa-github', text: 'Código' },
                     { url: 'https://app.powerbi.com/view?r=eyJrIjoiNDVkMjMzODMtODlmOC00YzY2LTgyZTktMWJjMTdhZmEwMzllIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=409938f12b04936c2adb', icon: 'fas fa-external-link-alt', text: 'Ver' }
                 ]
             }
@@ -491,7 +491,7 @@ const translations = {
                 img: 'assets/RetailAnalytics.jpg',
                 icon: 'fas fa-coins',
                 links: [
-                    { url: '#', icon: 'fab fa-github', text: 'Code' },
+                    { url: 'https://github.com/AllanBOG/Portfolio/blob/main/data_processing.py', icon: 'fab fa-github', text: 'Code' },
                     { url: 'https://app.powerbi.com/view?r=eyJrIjoiNDVkMjMzODMtODlmOC00YzY2LTgyZTktMWJjMTdhZmEwMzllIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=409938f12b04936c2adb', icon: 'fas fa-external-link-alt', text: 'View' }
                 ]
             }
