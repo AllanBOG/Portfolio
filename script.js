@@ -290,8 +290,8 @@ const translations = {
                 title: 'Solicitudes departamento de flota',
                 desc: 'Pensado para el seguimiento de solicitudes del departamento de flota y principales tendencias de solicitudes.',
                 tech: ['Power BI'],
-                img: 'assets/fleetRequests2.jpg', 
-                icon: 'fas fa-heartbeat',
+                img: 'assets/FleetRequests2.jpg', 
+                icon: 'Captura de proyecto power BI',
                 links: [
                     { url: 'https://app.powerbi.com/view?r=eyJrIjoiY2M3NGVhODItYWNkNC00YTMyLTlmZmQtNjUwZTYyZGIzMGE0IiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=d36d6047e02b70cc2cae', icon: 'fas fa-external-link-alt', text: 'Ver' }
                 ]
@@ -301,7 +301,7 @@ const translations = {
                 desc: 'Dashboard interactivo de análisis de ventas minoristas con segmentación RFM de clientes. Procesamiento ETL con Python y visualización en Power BI.',
                 tech: ['Python', 'Power BI'],
                 img: 'assets/RetailAnalytics.jpg',
-                icon: 'fas fa-coins',
+                icon: 'Captura de proyecto power BI',
                 links: [
                     { url: 'https://github.com/AllanBOG/Portfolio/blob/main/data_processing.py', icon: 'fab fa-github', text: 'Código' },
                     { url: 'https://app.powerbi.com/view?r=eyJrIjoiNDVkMjMzODMtODlmOC00YzY2LTgyZTktMWJjMTdhZmEwMzllIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=409938f12b04936c2adb', icon: 'fas fa-external-link-alt', text: 'Ver' }
@@ -479,7 +479,7 @@ const translations = {
                 desc: 'Designed for tracking fleet department requests and main request trends.',
                 tech: ['Power BI'],
                 img: 'assets/FleetRequests2.jpg',
-                icon: 'fas fa-heartbeat',
+                icon: 'Power BI project screenshot',
                 links: [
                     { url: 'https://app.powerbi.com/view?r=eyJrIjoiY2M3NGVhODItYWNkNC00YTMyLTlmZmQtNjUwZTYyZGIzMGE0IiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=d36d6047e02b70cc2cae', icon: 'fas fa-external-link-alt', text: 'View' }
                 ]
@@ -489,7 +489,7 @@ const translations = {
                 desc: 'Interactive retail sales analytics dashboard with RFM customer segmentation. ETL processing with Python and Power BI visualization.',
                 tech: ['Python', 'Power BI'],
                 img: 'assets/RetailAnalytics.jpg',
-                icon: 'fas fa-coins',
+                icon: 'Power BI project screenshot',
                 links: [
                     { url: 'https://github.com/AllanBOG/Portfolio/blob/main/data_processing.py', icon: 'fab fa-github', text: 'Code' },
                     { url: 'https://app.powerbi.com/view?r=eyJrIjoiNDVkMjMzODMtODlmOC00YzY2LTgyZTktMWJjMTdhZmEwMzllIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=409938f12b04936c2adb', icon: 'fas fa-external-link-alt', text: 'View' }
