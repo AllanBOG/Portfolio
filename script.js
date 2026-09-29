@@ -146,9 +146,9 @@ const translations = {
                 alt: 'Power BI logo',
                 front: [],
                 back: [
-                    'Dashboards, informes y herramientas interactivas',
-                    'PowerQuery y DAX',
-                    'Modelos semánticos con actualización automática (Gateway)'
+                    'Creación de dashboards e informes interactivos',
+                    'Transformación de datos con Power Query y DAX',
+                    'Modelado semántico y actualización automática mediante Gateway'
                 ]
             },
             {
@@ -157,8 +157,8 @@ const translations = {
                 alt: 'Tableau logo',
                 front: [],
                 back: [
-                    'Dashboards interactivos y visualizaciones avanzadas',
-                    'Conexión a múltiples fuentes de datos',
+                    'Diseño de dashboards interactivos y visualizaciones avanzadas',
+                    'Conexión y análisis de datos de múltiples fuentes',
                     'Storytelling con datos y animaciones'
                 ]
             },
@@ -168,10 +168,10 @@ const translations = {
                 alt: 'Excel logo',
                 front: [],
                 back: [
-                    'Tablas dinámicas',
-                    'PowerQuery y Power Pivot',
-                    'Informes y dashboards',
-                    'Tablas con fórmulas complejas'
+                    'Análisis y resumen de datos con tablas dinámicas',
+                    'Transformación de datos con Power Query y Power Pivot',
+                    'Creación de informes y dashboards',
+                    'Uso de fórmulas avanzadas para el análisis'
                 ]
             },
             {
@@ -180,9 +180,9 @@ const translations = {
                 alt: 'SQL logo',
                 front: [],
                 back: [
-                    'Creación de consultas simples o combinadas',
-                    'Filtrar y ordenar resultados',
-                    'Integración con Power BI'
+                    'Consultas para combinar, filtrar y ordenar datos',
+                    'Extracción y análisis de datos con SQL',
+                    'Integración de consultas y resultados con Power BI'
                 ]
             },
             {
@@ -191,10 +191,10 @@ const translations = {
                 alt: 'Power Automate logo',
                 front: [],
                 back: [
-                    'Notificaciones automáticas',
-                    'Automatizaciones con servicios de Microsoft o terceros',
-                    'Recolección y sincronización de datos',
-                    'Optimización de procesos de negocios'
+                    'Automatización de flujos y envío de notificaciones',
+                    'Integración de servicios de Microsoft y aplicaciones de terceros',
+                    'Recopilación y sincronización de datos',
+                    'Optimización de procesos repetitivos'
                 ]
             },
             {
@@ -203,9 +203,9 @@ const translations = {
                 alt: 'Power Apps logo',
                 front: [],
                 back: [
-                    'Aplicaciones personalizadas low-code',
-                    'Integración con servicios de Microsoft',
-                    'Gestión de datos y optimización de procesos'
+                    'Creación de aplicaciones personalizadas con low-code',
+                    'Integración con servicios y datos de Microsoft',
+                    'Digitalización y optimización de procesos'
                 ]
             },
             {
@@ -214,9 +214,9 @@ const translations = {
                 alt: 'Python logo',
                 front: [],
                 back: [
-                    'Análisis Exploratorio de Datos (EDA)',
-                    'Automatización',
-                    'Aprendiendo análisis de datos (Pandas y NumPy)'
+                    'Análisis exploratorio de datos (EDA)',
+                    'Automatización de tareas',
+                    'Aprendizaje activo de análisis de datos con Pandas y NumPy'
                 ]
             },
             {
@@ -225,9 +225,8 @@ const translations = {
                 alt: 'JavaScript logo',
                 front: [],
                 back: [
-                    'Manipulación de DOM',
-                    'Integración con HTML',
-                    'En aprendizaje activo dentro del programa ONE de Oracle'
+                    'Manipulación de elementos del DOM',
+                    'Creación de interacciones en páginas HTML'
                 ]
             },
             {
@@ -236,8 +235,9 @@ const translations = {
                 alt: 'HTML 5 logo',
                 front: [],
                 back: [
-                    'Diseño de plantillas personalizadas para emails o notificaciones',
-                    'En aprendizaje activo dentro del programa ONE de Oracle'
+                    'Creación de interfaces HTML para aplicaciones desarrolladas con Google Apps Script',
+                    'Integración de interfaces HTML con la lógica de Apps Script',
+                    'Creación de plantillas HTML para correos y notificaciones'
                 ]
             },
             {
@@ -247,8 +247,8 @@ const translations = {
                 front: [],
                 back: [
                     'Creación de sitios colaborativos',
-                    'Integración con Power Automate, Power Apps',
-                    'Sitios para publicación de dashboards'
+                    'Integración con Power Automate y Power Apps',
+                    'Publicación y acceso a dashboards'
                 ]
             },
             {
@@ -257,9 +257,9 @@ const translations = {
                 alt: 'OneDrive logo',
                 front: [],
                 back: [
-                    'Almacenamiento y sincronización segura de datasets',
+                    'Almacenamiento y sincronización de conjuntos de datos',
                     'Compartición controlada de archivos e informes',
-                    'Integración con herramientas de Microsoft: Power BI, Power Apps, Power Automate, SharePoint'
+                    'Integración con Power BI, Power Apps, Power Automate y SharePoint'
                 ]
             },
             {
@@ -269,8 +269,41 @@ const translations = {
                 front: [],
                 back: [
                     'Edición y composición de imágenes',
-                    'Diseño de elementos visuales personalizados',
-                    'Branding corporativo y UI/UX de dashboards'
+                    'Diseño de recursos visuales personalizados',
+                    'Aplicación de branding y principios UI/UX a dashboards'
+                ]
+            },
+            {
+                name: 'React',
+                img: 'assets/React logo.png',
+                alt: 'React logo',
+                front: [],
+                back: [
+                    'Desarrollo de interfaces interactivas',
+                    'Construcción de componentes reutilizables',
+                    'Gestión del estado y del flujo de datos'
+                ]
+            },
+            {
+                name: 'PostgreSQL',
+                img: 'assets/PostgreSQL logo.png',
+                alt: 'PostgreSQL logo',
+                front: [],
+                back: [
+                    'Diseño y optimización de bases de datos relacionales',
+                    'Consultas SQL para análisis y gestión de datos',
+                    'Gestión de transacciones y control de acceso a datos'
+                ]
+            },
+            {
+                name: 'Google Apps Script',
+                img: 'assets/Apps Script logo.png',
+                alt: 'Google Apps Script logo',
+                front: [],
+                back: [
+                    'Desarrollo de aplicaciones para Google Workspace',
+                    'Creación de soluciones conectadas a servicios de Google',
+                    'Automatización de flujos mediante scripts y disparadores'
                 ]
             }
         ],
@@ -290,7 +323,8 @@ const translations = {
                 title: 'Solicitudes departamento de flota',
                 desc: 'Pensado para el seguimiento de solicitudes del departamento de flota y principales tendencias de solicitudes.',
                 tech: ['Power BI'],
-                img: 'assets/FleetRequests2.jpg', 
+                img: 'assets/FleetRequests.png',
+                alt: 'Captura del proyecto Fleet Department Requests',
                 icon: 'Captura de proyecto power BI',
                 links: [
                     { url: 'https://app.powerbi.com/view?r=eyJrIjoiY2M3NGVhODItYWNkNC00YTMyLTlmZmQtNjUwZTYyZGIzMGE0IiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=d36d6047e02b70cc2cae', icon: 'fas fa-external-link-alt', text: 'Ver' }
@@ -306,6 +340,24 @@ const translations = {
                     { url: 'https://github.com/AllanBOG/Portfolio/blob/main/data_processing.py', icon: 'fab fa-github', text: 'Código' },
                     { url: 'https://app.powerbi.com/view?r=eyJrIjoiNDVkMjMzODMtODlmOC00YzY2LTgyZTktMWJjMTdhZmEwMzllIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=409938f12b04936c2adb', icon: 'fas fa-external-link-alt', text: 'Ver' }
                 ]
+            },
+            {
+                title: 'ZentiaFlow',
+                desc: 'Plataforma SaaS desarrollada con React para apoyar la gestión de clínicas.',
+                tech: ['React', 'SaaS'],
+                thumbnail: 'assets/ZentiaFlow 1.png',
+                thumbnailAlt: 'Captura de la aplicación ZentiaFlow',
+                gallery: ['assets/ZentiaFlow 1.png', 'assets/ZentiaFlow 2.png'],
+                links: []
+            },
+            {
+                title: 'Aplicación de Bodega',
+                desc: 'Aplicación desarrollada con Google Apps Script y HTML para apoyar el registro y seguimiento del inventario.',
+                tech: ['Google Apps Script', 'HTML'],
+                thumbnail: 'assets/Bodega app 1.png',
+                thumbnailAlt: 'Captura de la aplicación de bodega',
+                gallery: ['assets/Bodega app 1.png', 'assets/Bodega app 2.png'],
+                links: []
             }
         ],
         'contact-title': 'Contacto',
@@ -334,9 +386,9 @@ const translations = {
                 alt: 'Power BI logo',
                 front: [],
                 back: [
-                    'Dashboards, reports and interactive tools',
-                    'PowerQuery and DAX',
-                    'Semantic models with automatic refresh (Gateway)'
+                    'Creation of interactive dashboards and reports',
+                    'Data transformation with Power Query and DAX',
+                    'Semantic modeling and automatic refresh through Gateway'
                 ]
             },
             {
@@ -345,8 +397,8 @@ const translations = {
                 alt: 'Tableau logo',
                 front: [],
                 back: [
-                    'Interactive dashboards and advanced visualizations',
-                    'Connection to multiple data sources',
+                    'Design of interactive dashboards and advanced visualizations',
+                    'Connecting and analyzing data from multiple sources',
                     'Data storytelling and animations'
                 ]
             },
@@ -356,10 +408,10 @@ const translations = {
                 alt: 'Excel logo',
                 front: [],
                 back: [
-                    'Pivot tables',
-                    'PowerQuery and Power Pivot',
-                    'Reports and dashboards',
-                    'Tables with complex formulas'
+                    'Summarizing and analyzing data with pivot tables',
+                    'Transforming data with Power Query and Power Pivot',
+                    'Creating reports and dashboards',
+                    'Using advanced formulas for analysis'
                 ]
             },
             {
@@ -368,9 +420,9 @@ const translations = {
                 alt: 'SQL logo',
                 front: [],
                 back: [
-                    'Creation of simple or combined queries',
-                    'Filtering and sorting results',
-                    'Integration with Power BI'
+                    'Queries to combine, filter, and sort data',
+                    'Extracting and analyzing data with SQL',
+                    'Connecting queries and results to Power BI'
                 ]
             },
             {
@@ -379,10 +431,10 @@ const translations = {
                 alt: 'Power Automate logo',
                 front: [],
                 back: [
-                    'Automatic notifications',
-                    'Automations with Microsoft or third-party services',
-                    'Data collection and synchronization',
-                    'Business process optimization'
+                    'Automating workflows and sending notifications',
+                    'Integrating Microsoft services and third-party applications',
+                    'Collecting and synchronizing data',
+                    'Optimizing repetitive processes'
                 ]
             },
             {
@@ -391,9 +443,9 @@ const translations = {
                 alt: 'Power Apps logo',
                 front: [],
                 back: [
-                    'Custom low-code applications',
-                    'Integration with Microsoft services',
-                    'Data management and process optimization'
+                    'Building custom low-code applications',
+                    'Integrating Microsoft services and data',
+                    'Digitizing and optimizing processes'
                 ]
             },
             {
@@ -402,9 +454,9 @@ const translations = {
                 alt: 'Python logo',
                 front: [],
                 back: [
-                    'Exploratory Data Analysis (EDA)',
-                    'Automation',
-                    'Learning data analysis (Pandas and NumPy)'
+                    'Exploratory data analysis (EDA)',
+                    'Task automation',
+                    'Actively learning data analysis with Pandas and NumPy'
                 ]
             },
             {
@@ -413,9 +465,8 @@ const translations = {
                 alt: 'JavaScript logo',
                 front: [],
                 back: [
-                    'DOM manipulation',
-                    'Integration with HTML',
-                    'Active learning in Oracle ONE program'
+                    'Manipulating DOM elements',
+                    'Building interactions on HTML pages'
                 ]
             },
             {
@@ -424,8 +475,9 @@ const translations = {
                 alt: 'HTML 5 logo',
                 front: [],
                 back: [
-                    'Design of custom templates for emails or notifications',
-                    'Active learning in Oracle ONE program'
+                    'Building HTML interfaces for applications developed with Google Apps Script',
+                    'Connecting HTML interfaces with Apps Script logic',
+                    'Creating HTML templates for emails and notifications'
                 ]
             },
             {
@@ -435,8 +487,8 @@ const translations = {
                 front: [],
                 back: [
                     'Creation of collaborative sites',
-                    'Integration with Power Automate, Power Apps',
-                    'Sites for dashboard publishing'
+                    'Integration with Power Automate and Power Apps',
+                    'Publishing dashboards and providing access'
                 ]
             },
             {
@@ -445,9 +497,9 @@ const translations = {
                 alt: 'OneDrive logo',
                 front: [],
                 back: [
-                    'Secure storage and synchronization of datasets',
+                    'Storage and synchronization of datasets',
                     'Controlled sharing of files and reports',
-                    'Integration with Microsoft tools: Power BI, Power Apps, Power Automate, SharePoint'
+                    'Integration with Power BI, Power Apps, Power Automate, and SharePoint'
                 ]
             },
             {
@@ -457,8 +509,41 @@ const translations = {
                 front: [],
                 back: [
                     'Image editing and composition',
-                    'Design of custom visual elements',
-                    'Corporate branding and dashboard UI/UX'
+                    'Designing custom visual assets',
+                    'Applying branding and UI/UX principles to dashboards'
+                ]
+            },
+            {
+                name: 'React',
+                img: 'assets/React logo.png',
+                alt: 'React logo',
+                front: [],
+                back: [
+                    'Developing interactive user interfaces',
+                    'Building reusable components',
+                    'Managing state and data flow'
+                ]
+            },
+            {
+                name: 'PostgreSQL',
+                img: 'assets/PostgreSQL logo.png',
+                alt: 'PostgreSQL logo',
+                front: [],
+                back: [
+                    'Designing and optimizing relational databases',
+                    'Using SQL queries for data analysis and management',
+                    'Managing transactions and data access control'
+                ]
+            },
+            {
+                name: 'Google Apps Script',
+                img: 'assets/Apps Script logo.png',
+                alt: 'Google Apps Script logo',
+                front: [],
+                back: [
+                    'Developing applications for Google Workspace',
+                    'Building solutions connected to Google services',
+                    'Automating workflows with scripts and triggers'
                 ]
             }
         ],
@@ -478,7 +563,8 @@ const translations = {
                 title: 'Fleet department requests',
                 desc: 'Designed for tracking fleet department requests and main request trends.',
                 tech: ['Power BI'],
-                img: 'assets/FleetRequests2.jpg',
+                img: 'assets/FleetRequests.png',
+                alt: 'Fleet Department Requests project screenshot',
                 icon: 'Power BI project screenshot',
                 links: [
                     { url: 'https://app.powerbi.com/view?r=eyJrIjoiY2M3NGVhODItYWNkNC00YTMyLTlmZmQtNjUwZTYyZGIzMGE0IiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=d36d6047e02b70cc2cae', icon: 'fas fa-external-link-alt', text: 'View' }
@@ -494,6 +580,24 @@ const translations = {
                     { url: 'https://github.com/AllanBOG/Portfolio/blob/main/data_processing.py', icon: 'fab fa-github', text: 'Code' },
                     { url: 'https://app.powerbi.com/view?r=eyJrIjoiNDVkMjMzODMtODlmOC00YzY2LTgyZTktMWJjMTdhZmEwMzllIiwidCI6IjFlNjYyYzA0LTk4MmQtNGM5Yi1iZTg5LWE4N2FhMzFiYmVhZCIsImMiOjR9&pageName=409938f12b04936c2adb', icon: 'fas fa-external-link-alt', text: 'View' }
                 ]
+            },
+            {
+                title: 'ZentiaFlow',
+                desc: 'A React-based SaaS platform designed to support clinic management.',
+                tech: ['React', 'SaaS'],
+                thumbnail: 'assets/ZentiaFlow 1.png',
+                thumbnailAlt: 'Screenshot of the ZentiaFlow application',
+                gallery: ['assets/ZentiaFlow 1.png', 'assets/ZentiaFlow 2.png'],
+                links: []
+            },
+            {
+                title: 'Warehouse Application',
+                desc: 'An application built with Google Apps Script and HTML to support inventory recording and tracking.',
+                tech: ['Google Apps Script', 'HTML'],
+                thumbnail: 'assets/Bodega app 1.png',
+                thumbnailAlt: 'Screenshot of the warehouse application',
+                gallery: ['assets/Bodega app 1.png', 'assets/Bodega app 2.png'],
+                links: []
             }
         ],
         'contact-title': 'Contact',
@@ -684,6 +788,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //runTypeWriterEffect();
         initSkillsAnimations();
         initLanguageToggle();
+        initProjectGallery();
     }, 100);
 });
 
@@ -786,14 +891,16 @@ function renderProjects(lang) {
     const grid = document.querySelector('.projects-grid');
     if (!grid) return;
     grid.innerHTML = '';
-    projects.forEach(project => {
+    projects.forEach((project, index) => {
         const card = document.createElement('div');
         card.className = 'project-card';
+        const thumbnail = project.img || project.thumbnail;
+        const thumbnailAlt = project.alt || project.thumbnailAlt || '';
         card.innerHTML = `
             <div class="project-image">
                 ${
-                    project.img
-                        ? `<img src="${project.img}" alt="${project.alt || ''}" height="205">`
+                    thumbnail
+                        ? `<img src="${thumbnail}" alt="${thumbnailAlt}" loading="lazy">`
                         : `<i class="${project.icon || ''}"></i>`
                 }
             </div>
@@ -809,10 +916,77 @@ function renderProjects(lang) {
                             <i class="${link.icon}"></i> ${link.text}
                         </a>`
                     ).join('')}
+                    ${project.gallery?.length ? `<button class="project-link project-gallery-trigger" type="button" data-gallery-index="${index}">
+                        <i class="fas fa-images" aria-hidden="true"></i> ${lang === 'es' ? 'Ver imágenes' : 'View images'}
+                    </button>` : ''}
                 </div>
             </div>
         `;
         grid.appendChild(card);
+    });
+}
+
+function initProjectGallery() {
+    const grid = document.querySelector('.projects-grid');
+    const dialog = document.querySelector('#project-gallery');
+    if (!grid || !dialog) return;
+
+    const image = dialog.querySelector('.gallery-image');
+    const title = dialog.querySelector('.gallery-title');
+    const counter = dialog.querySelector('.gallery-counter');
+    const closeButton = dialog.querySelector('.gallery-close');
+    const previousButton = dialog.querySelector('.gallery-previous');
+    const nextButton = dialog.querySelector('.gallery-next');
+    let images = [];
+    let currentIndex = 0;
+    let projectTitle = '';
+    let language = 'es';
+
+    const updateGallery = () => {
+        image.src = images[currentIndex];
+        image.alt = `${projectTitle} - ${language === 'es' ? 'imagen' : 'image'} ${currentIndex + 1}`;
+        counter.textContent = `${currentIndex + 1} / ${images.length}`;
+    };
+
+    grid.addEventListener('click', event => {
+        const trigger = event.target.closest('[data-gallery-index]');
+        if (!trigger) return;
+
+        language = document.documentElement.lang === 'en' ? 'en' : 'es';
+        const project = translations[language].projects[Number(trigger.dataset.galleryIndex)];
+        if (!project?.gallery?.length) return;
+
+        images = project.gallery;
+        projectTitle = project.title;
+        currentIndex = 0;
+        title.textContent = projectTitle;
+        closeButton.setAttribute('aria-label', language === 'es' ? 'Cerrar galería' : 'Close gallery');
+        closeButton.title = language === 'es' ? 'Cerrar galería' : 'Close gallery';
+        previousButton.setAttribute('aria-label', language === 'es' ? 'Imagen anterior' : 'Previous image');
+        nextButton.setAttribute('aria-label', language === 'es' ? 'Imagen siguiente' : 'Next image');
+        dialog.showModal();
+        updateGallery();
+    });
+
+    previousButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateGallery();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateGallery();
+    });
+
+    closeButton.addEventListener('click', () => dialog.close());
+
+    dialog.addEventListener('click', event => {
+        if (event.target === dialog) dialog.close();
+    });
+
+    dialog.addEventListener('keydown', event => {
+        if (event.key === 'ArrowLeft') previousButton.click();
+        if (event.key === 'ArrowRight') nextButton.click();
     });
 }
 

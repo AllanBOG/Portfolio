@@ -422,6 +422,14 @@ box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     background: transparent;
 }
 
+.skill-react .skill-logo {
+    background: transparent;
+}
+
+.skill-postgresql .skill-logo {
+    background: transparent;
+}
+
 /* =================================
    EFECTO DE TARJETA GIRATORIA
    ================================= */
@@ -583,6 +591,15 @@ box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     font-size: 2rem;
 }
 
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    object-fit: contain;
+    background: #fff;
+}
+
 .project-content {
     padding: 1.5rem;
 }
@@ -618,6 +635,7 @@ box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 .project-links {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .project-link {
@@ -630,8 +648,127 @@ box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     transition: color 0.3s ease;
 }
 
+.project-gallery-trigger {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+}
+
 .project-link:hover {
     color: var(--secondary-color);
+}
+
+.project-gallery {
+    width: min(1000px, calc(100% - 2rem));
+    max-width: none;
+    max-height: calc(100% - 2rem);
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 8px;
+    color: var(--text-dark);
+    background: transparent;
+}
+
+.project-gallery::backdrop {
+    background: rgba(15, 23, 42, 0.82);
+}
+
+.gallery-panel {
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-hover);
+}
+
+.gallery-header,
+.gallery-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+}
+
+.gallery-header {
+    border-bottom: 1px solid rgba(31, 41, 55, 0.12);
+}
+
+.gallery-title {
+    min-width: 0;
+    font-size: 1.1rem;
+    overflow-wrap: anywhere;
+}
+
+.gallery-stage {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) 48px;
+    align-items: center;
+    justify-items: center;
+    gap: 0.5rem;
+    min-height: 220px;
+    padding: 1rem;
+    background: #111827;
+}
+
+.gallery-image {
+    display: block;
+    width: 100%;
+    height: min(65vh, 680px);
+    object-fit: contain;
+}
+
+.gallery-control,
+.gallery-close {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 4px;
+    color: var(--text-dark);
+    background: var(--bg-light);
+    cursor: pointer;
+}
+
+.gallery-control {
+    color: white;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.gallery-control:hover,
+.gallery-close:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.gallery-footer {
+    justify-content: center;
+    color: var(--text-light);
+}
+
+@media (max-width: 480px) {
+    .project-gallery {
+        width: calc(100% - 1rem);
+    }
+
+    .gallery-stage {
+        grid-template-columns: 36px minmax(0, 1fr) 36px;
+        gap: 0.25rem;
+        padding: 0.5rem;
+    }
+
+    .gallery-control {
+        width: 36px;
+        height: 36px;
+    }
+
+    .gallery-image {
+        height: 55vh;
+    }
 }
 
 /* =================================
